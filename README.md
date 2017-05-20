@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/bgruening/docker-galaxy-chemicaltoolbox.svg?branch=master)](https://travis-ci.org/bgruening/docker-galaxy-chemicaltoolbox)
+[![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-chemicaltoolbox/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-chemicaltoolbox)
+[![Gitter](https://badges.gitter.im/bgruening/docker-galaxy-stable.svg)](https://gitter.im/bgruening/docker-galaxy-stable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ChemicalToolBox Docker Image
 ============================
 
