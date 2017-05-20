@@ -36,20 +36,33 @@
 #  * install_repository_dependencies: True or False - whether to install repo
 #                               dependencies or not. (default: True)
 
+
 api_key: admin
 galaxy_instance: http://localhost:8080
 tools:
-- name: chemicaltoolbox
+- name: openmg
   owner: bgruening
-  tool_panel_section_label: "ChemicalToolBox"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: Cheminformatics
 
-- name: chemicaltoolbox_merging_chemical_databases_workflow
+- name: spectral_hk
   owner: bgruening
-  tool_panel_section_label: "ChemicalToolBox"
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  tool_panel_section_label: Cheminformatics
 
+- name: suite_openbabel
+  owner: bgruening
+  tool_panel_section_label: "Open Babel"
 
+- name: chemfp
+  owner: bgruening
+  tool_panel_section_label: "ChemFP"
+
+- name: simsearch
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
+
+- name: suite_rdkit
+  owner: bgruening
+  tool_panel_section_label: "RDKit"
 
 
 
