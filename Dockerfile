@@ -1,6 +1,6 @@
 # Galaxy - ChemicalToolBox
 
-FROM quay.io/bgruening/galaxy:17.01
+FROM bgruening/galaxy-stable:17.01
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
