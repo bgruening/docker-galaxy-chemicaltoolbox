@@ -4,8 +4,8 @@ FROM bgruening/galaxy-stable:17.01
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
-
-ENV GALAXY_CONFIG_BRAND ChemicalToolBox
+ENV GALAXY_CONFIG_BRAND=ChemicalToolBox \
+    GALAXY_CONFIG_CONDA_AUTO_INSTALL=True
 
 # Include all needed scripts and libraries from the host
 # compressed archives will be extracted automatically
