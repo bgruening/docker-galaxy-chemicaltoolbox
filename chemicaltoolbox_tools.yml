@@ -62,9 +62,26 @@ tools:
   owner: bgruening
   tool_panel_section_label: Cheminformatics
 
+- name: qed
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
+
 - name: suite_rdkit
   owner: bgruening
   tool_panel_section_label: "RDKit"
 
+- name: align_it
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
 
+- name: strip_it
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
+  
+- name: shape_it
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
 
+- name: natural_product_likeness
+  owner: bgruening
+  tool_panel_section_label: Cheminformatics
