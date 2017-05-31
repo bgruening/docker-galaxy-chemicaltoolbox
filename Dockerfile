@@ -16,4 +16,5 @@ ENV GALAXY_CONFIG_BRAND=ChemicalToolBox
 #RUN chmod +x /usr/bin/startup
 
 ADD chemicaltoolbox_tools.yml $GALAXY_ROOT/tools.yaml
-RUN install-tools $GALAXY_ROOT/tools.yaml
+RUN install-tools $GALAXY_ROOT/tools.yaml && \
+    /tool_deps/_conda/bin/conda clean --tarballs
