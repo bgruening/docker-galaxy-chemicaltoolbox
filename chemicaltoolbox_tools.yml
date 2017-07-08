@@ -85,3 +85,7 @@ tools:
 - name: natural_product_likeness
   owner: bgruening
   tool_panel_section_label: Cheminformatics
+
+- name: apoc
+  owner: earlhaminst
+  tool_panel_section_label: Cheminformatics
