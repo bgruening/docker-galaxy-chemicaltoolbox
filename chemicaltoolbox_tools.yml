@@ -70,3 +70,7 @@ tools:
     - name: apoc
       owner: earlhaminst
       tool_panel_section_label: Cheminformatics
+
+    - name: rdock
+      owner: earlhaminst
+      tool_panel_section_label: Cheminformatics
