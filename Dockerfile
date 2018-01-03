@@ -1,17 +1,14 @@
 # Galaxy - ChemicalToolBox
-#
-# VERSION       0.1
 
 FROM quay.io/bgruening/galaxy:17.09
 
 MAINTAINER Björn A. Grüning, bjoern.gruening@gmail.com
 
-ENV GALAXY_CONFIG_BRAND ChemicalToolBox \
-GALAXY_CONFIG_SERVE_XSS_VULNERABLE_MIMETYPES True
+ENV GALAXY_CONFIG_BRAND=ChemicalToolBox
 
 # Include all needed scripts and libraries from the host
 # compressed archives will be extracted automatically
-ADD ./Jmoleditor.tar.bz2 /galaxy-central/
+#ADD ./Jmoleditor.tar.bz2 /galaxy-central/
 
 ADD chemicaltoolbox_tools.yml $GALAXY_ROOT/tools.yaml
 RUN install-tools $GALAXY_ROOT/tools.yaml && \

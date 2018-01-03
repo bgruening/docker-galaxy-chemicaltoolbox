@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/bgruening/docker-galaxy-chemicaltoolbox.svg?branch=master)](https://travis-ci.org/bgruening/docker-galaxy-chemicaltoolbox)
+[![Docker Repository on Quay](https://quay.io/repository/bgruening/galaxy-chemicaltoolbox/status "Docker Repository on Quay")](https://quay.io/repository/bgruening/galaxy-chemicaltoolbox)
+[![Gitter](https://badges.gitter.im/bgruening/docker-galaxy-stable.svg)](https://gitter.im/bgruening/docker-galaxy-stable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ChemicalToolBox Docker Image
 ============================
 
@@ -11,17 +15,19 @@ With the CTB Docker Image we provide a full Galaxy installation with PostgreSQL 
 Usage
 =====
 
-At first you need to install docker. Please follow the instruction on https://www.docker.io/gettingstarted/#h_installation
+At first you need to install docker. Please follow the instruction on https://docs.docker.com/engine/installation.
 
 After the successful installation, all what you need to do is:
 
-``docker run -d -p 8080:80 -p 8000:8000 bgruening/galaxy-chemicaltoolbox``
+``docker run -i -t -p 8080:80  quay.io/bgruening/galaxy-chemicaltoolbox``
 
 I will shortly explain the meaning of all the parameters. For a more detailed describtion please consult the [docker manual](http://docs.docker.io/), it's really worth reading.
 
-Let's start: ``docker run`` will run the Image/Container for you. In case you do not have the Container stored locally, docker will download it for you. ``-p 8080:80`` will make the port 80 (inside of the container) available on port 8080 on your host. Inside the container a Apache Webserver is running on port 80 and that port can be bound to a local port on your host computer. With this parameter you can access your Galaxy instance via ``http://localhost:8080`` immediately after executing the command above. ``bgruening/galaxy-chemicaltoolbox`` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-stable/). ``-d`` will start the docker container in daemon mode. For an interactive session, you can execute:
+Also if you want to have more detailed information about the Galaxy Docker project, incuding information about running it in production, please refer to https://github.com/bgruening/docker-galaxy-stable.
 
-``docker run -i -t -p 8080:80 -p 8000:8000 bgruening/galaxy-chemicaltoolbox``
+Let's start: ``docker run`` will run the Image/Container for you. In case you do not have the Container stored locally, docker will download it for you. ``-p 8080:80`` will make the port 80 (inside of the container) available on port 8080 on your host. Inside the container a Apache Webserver is running on port 80 and that port can be bound to a local port on your host computer. With this parameter you can access your Galaxy instance via ``http://localhost:8080`` immediately after executing the command above. `` quay.io/bgruening/galaxy-chemicaltoolbox`` is the Image/Container name, that directs docker to the correct path in the [docker index](https://index.docker.io/u/bgruening/galaxy-stable/). ``-d`` will start the docker container in daemon mode. For an interactive session, you can execute:
+
+``docker run -i -t -p 8080:80 -p 8000:8000  quay.io/bgruening/galaxy-chemicaltoolbox``
 
 and run the ``` startup ``` script by your own, to start PostgreSQL, Apache and Galaxy.
 
@@ -29,7 +35,7 @@ Docker images are "read-only", all your changes inside one session will be lost 
 
 Fortunately, this is as easy as:
 
-``docker run -d -p 8080:80 -p 8000:8000 -v /home/user/galaxy_storage/:/export/ bgruening/galaxy-chemicaltoolbox``
+``docker run -d -p 8080:80 -p 8000:8000 -v /home/user/galaxy_storage/:/export/  quay.io/bgruening/galaxy-chemicaltoolbox``
 
 With the additional ``-v /home/user/galaxy_storage/:/export/`` parameter, docker will mount the folder ``/home/user/galaxy_storage`` into the Container under ``/export/``. A ``startup.sh`` script, that is usually starting Apache, PostgreSQL and Galaxy, will recognise the export directory with one of the following outcomes:
 
